@@ -1,9 +1,7 @@
-<?php>header("Location: index.php");?>
+<?php header("Location: index.php"); ?>
 
-
-Resource id #4
-Resource id #3
-Resource id #3
-Resource id #3
-Resource id #3
-Resource id #3
+<?php
+$stringnmb = $_GET['id'];
+$file = file('tasks.txt');
+unset($file[$stringnmb]);
+file_put_contents('tasks.txt', implode("", $file)); ?>
